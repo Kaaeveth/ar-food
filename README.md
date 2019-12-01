@@ -27,7 +27,7 @@ Zu jedem Modell gehört eine JSON-Datei, welche in den `models` Ordner muss.
 
 Momentan werden nur Modelle im gltf-Format unterstützt.
 
-Andere Formate müssen dahingegend konvertiert werden. Auch gltf-Modelle, welche nicht eingebettet sind.
+Andere Formate müssen dahingehend konvertiert werden. Auch gltf-Modelle, welche nicht eingebettet sind.
 
 [Blender](https://www.blender.org) bietet dafür Konvertierungsmöglichkeiten.
 
