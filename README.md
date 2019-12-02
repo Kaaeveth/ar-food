@@ -3,21 +3,36 @@ Demoanwendung für die Seminararbeit "Einsatzmöglichkeiten von Augmented Realit
 
 Eine Live Version ist [hier](https://bofloos.de/ar-food/about) zu finden.
 
+<img src="https://bofloos.de/static/img/demo_beispiel.png" width="200" height="400" />
+
+Funktioniert noch nicht zu 100% mit Firefox
+
+### Verwendete Bibliotheken
+
+1. [AR.js](https://github.com/jeromeetienne/AR.js)
+2. [nimiq QR-Code scanner](https://github.com/nimiq/qr-scanner)
+
 # Installation
 
 [Node.js](https://nodejs.org/en/download/) wird benötigt!
 
 1. Mit git klonen oder einfach als Zip herunterladen
 
-`git clone https://github.com/Kaaeveth/ar-food.git`
+```
+git clone https://github.com/Kaaeveth/ar-food.git
+```
 
 2. In das Verzeichnis wechseln, eine Konsole (cmd) öffnen und folgendes eingeben:
 
-`npm install`
+```
+npm install
+```
 
-3. Zum starten dann folgendes eingeben
+3. Zum Starten dann folgendes eingeben
 
-`npm start`
+```
+npm start
+```
 
 Ein paar Hiro Marker sind im `static` Ordner mit enthalten
 
