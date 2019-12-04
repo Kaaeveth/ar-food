@@ -20,15 +20,17 @@
     <title><%= title %></title>
 </head>
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene artoolkit embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: true;" loading-screen="backgroundColor: black; dotsColor: #009688;">
+        <a-scene stats gltf-model="dracoDecoderPath: /static/draco/;" artoolkit embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: true;" loading-screen="backgroundColor: black; dotsColor: #009688;">
 
             <a-assets id="assets" timeout="20000">
                 <a-asset-item id="<%= modelName %>" data-scale="<%= model.scale %>" data-position="<%= model.position %>" data-rotation="<%= model.rotation %>" src=<%= model.model %> ></a-asset-item>
+                <a-asset-item id="rulerModel" src="/static/models/ruler_drc.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker preset="hiro" id="marker-main" registerevents>
                 <a-text value="" id="placeholder" position="-0.1 0 0"></a-text>
                 <a-entity id="entity" gltf-model="#<%= modelName %>" position="<%= model.position %>" scale="<%= model.scale %>" rotation="<%= model.rotation %>"></a-entity>
+                <a-entity id="ruler" gltf-model="#rulerModel" position="-0.8 0 0.1" scale="0.01 0.01 0.01" rotation="90 180 90"></a-entity>
             </a-marker>
         
             <a-entity camera></a-entity>
