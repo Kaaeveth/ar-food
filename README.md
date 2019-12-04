@@ -53,9 +53,9 @@ Der Aufbau ist wiefolgt:
 ```json
 {
     "model": "pfad/zu/model.gltf",
-    "position": "0 0 0",
-    "scale": "0 0 0",
-    "rotation": "0 0 0"
+    "position": "",
+    "scale": "",
+    "rotation": ""
 }
 ```
 
