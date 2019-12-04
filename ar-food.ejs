@@ -20,17 +20,19 @@
     <title><%= title %></title>
 </head>
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene stats gltf-model="dracoDecoderPath: /static/draco/;" artoolkit embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: true;" loading-screen="backgroundColor: black; dotsColor: #009688;">
+        <a-scene gltf-model="dracoDecoderPath: /static/draco/;" artoolkit embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: true;" loading-screen="backgroundColor: black; dotsColor: #009688;">
 
             <a-assets id="assets" timeout="20000">
                 <a-asset-item id="<%= modelName %>" data-scale="<%= model.scale %>" data-position="<%= model.position %>" data-rotation="<%= model.rotation %>" src=<%= model.model %> ></a-asset-item>
-                <a-asset-item id="rulerModel" src="/static/models/ruler_drc.gltf"></a-asset-item>
+                <!-- <a-asset-item id="rulerModel" src="/static/models/ruler_drc.gltf"></a-asset-item> -->
+                <img id="rulerImg" src="/static/ruler.png">
             </a-assets>
 
             <a-marker preset="hiro" id="marker-main" registerevents>
                 <a-text value="" id="placeholder" position="-0.1 0 0"></a-text>
                 <a-entity id="entity" gltf-model="#<%= modelName %>" position="<%= model.position %>" scale="<%= model.scale %>" rotation="<%= model.rotation %>"></a-entity>
-                <a-entity id="ruler" gltf-model="#rulerModel" position="-0.8 0 0.1" scale="0.01 0.01 0.01" rotation="90 180 90"></a-entity>
+                <!-- <a-entity id="ruler" gltf-model="#rulerModel" position="-0.8 0 0.1" scale="0.01 0.01 0.01" rotation="90 180 90"></a-entity> -->
+                <a-image src="#rulerImg" id="ruler" rotation="90 0 90" scale=".9 .2 0" position="-0.7 0 0"></a-image>
             </a-marker>
         
             <a-entity camera></a-entity>
@@ -38,6 +40,10 @@
 
         <p id="popup" style="color: white; bottom: 0px; left: 50%; width: 200px; height: 20px; opacity: 0.5; display: none; z-index: 9000; position: absolute; background-color: midnightblue;">
         </p>
+        <div style="bottom: 1px; left: 40%; z-index: 9001; display: flex; position: absolute; opacity: .5; background-color: azure;">
+            <p style="margin: 0;">Lineal: </p>
+            <input type="checkbox" checked id="rulerCheck" value="Lineal">
+        </div>
 
         <!-- debugging -->
         <canvas id="can" style="position: absolute; z-index: 1337; top: 0px;"></canvas>

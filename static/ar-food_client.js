@@ -137,6 +137,11 @@ window.addEventListener('load', () => {
 
     var model = document.getElementsByTagName('a-asset-item')[0];
     var modelSrc = model.getAttribute('src');
+    var ruler = document.getElementById('ruler');
+
+    document.getElementById('rulerCheck').addEventListener('change', function() {
+        ruler.setAttribute('visible', this.checked);
+    });
 
     if(modelSrc == '' || !modelSrc){
         document.getElementById('placeholder').setAttribute('value', 'Kein Model');
