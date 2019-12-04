@@ -76,6 +76,8 @@ function loadModel(qrcode){
 
     if(model !== undefined){
 
+        //Dies zu pruefen ist in dem Fall redundant, da A-Frame bereits geladene Dateien nicht nochmal fetched.
+        //Der Vollständigkeitshalber wird es allerdings trotzdem gemacht.
         var domModel = document.getElementById(model);
         if(domModel){
             console.log('Model in dom', domModel.id);
@@ -121,7 +123,7 @@ function setModel(asset){
     entity.object3D.rotation.set(THREE.Math.degToRad(rotObj.x), THREE.Math.degToRad(rotObj.y), THREE.Math.degToRad(rotObj.z));
     entity.flushToDOM();
 
-    notifyPopup('Model geladen');
+    notifyPopup('Model wird geladen');
 }
 
 function notifyPopup(msg){
