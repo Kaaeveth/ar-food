@@ -44,9 +44,11 @@ Momentan werden nur Modelle im gltf-Format unterstützt.
 
 Andere Formate müssen dahingehend konvertiert werden. Auch gltf-Modelle, welche nicht eingebettet sind.
 
-[Blender](https://www.blender.org) bietet dafür Konvertierungsmöglichkeiten.
+Die Modelle können auch mit Draco komprimiert sein.
 
-Das Modell wird über diese Datei aufgerufen.
+[gltf-pipeline](https://github.com/AnalyticalGraphicsInc/gltf-pipeline) aber auch [Blender](https://www.blender.org) bieten dafür Konvertierungsmöglichkeiten.
+
+Ein Modell wird über ihre JSON-Datei aufgerufen.
 
 Der Aufbau ist wiefolgt:
 
