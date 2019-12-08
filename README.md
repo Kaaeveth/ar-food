@@ -40,9 +40,9 @@ Ein paar Hiro Marker sind im `static` Ordner mit enthalten
 
 Zu jedem Modell gehört eine JSON-Datei, welche in den `models` Ordner muss.
 
-Momentan werden nur Modelle im gltf-Format unterstützt.
+Momentan werden nur Modelle im gltf-Format oder glb-Format unterstützt.
 
-Andere Formate müssen dahingehend konvertiert werden. Auch gltf-Modelle, welche nicht eingebettet sind.
+Andere Formate müssen dahingehend konvertiert werden.
 
 Die Modelle können auch mit Draco komprimiert sein.
 
