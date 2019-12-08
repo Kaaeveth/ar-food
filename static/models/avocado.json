@@ -1,5 +1,5 @@
 {
-    "model": "/static/models/Avocado_drc.gltf",
+    "model": "/static/models/avocado/avocado_drc.glb",
     "scale": "8 8 8",
     "position": "0 -0.2 0",
     "rotation": "-90 0 0"

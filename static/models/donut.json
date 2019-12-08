@@ -1,5 +1,5 @@
 {
-    "model": "/static/models/Donut_drc.gltf",
+    "model": "/static/models/donut/donut_drc.glb",
     "position": "0 0 0",
     "scale": "3 3 3",
     "rotation": "0 0 0"
