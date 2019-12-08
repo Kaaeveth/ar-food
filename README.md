@@ -50,7 +50,7 @@ Die Modelle können auch mit Draco komprimiert sein.
 
 Ein Modell wird über ihre JSON-Datei aufgerufen.
 
-Der Aufbau ist wiefolgt:
+Der Aufbau ist wie folgt:
 
 ```json
 {
